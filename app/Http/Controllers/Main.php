@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\DB;
 
 class Main extends Controller
 {
+    function index()
+    {
+        return view('index');
+    }
+    
     function db()
     {
         $users = DB::select('select * from users');

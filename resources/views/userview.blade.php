@@ -6,6 +6,11 @@
      <title>Document</title>
 </head>
 <body>
-     aaaaaaaaaaaaaaa
+     <h1>User View</h1>
+     @if (isset($name) && isset($email))
+          <p>Hi James</p>
+          <p>Name: {{ $name }}</p>
+          <p>Email: {{ $email }}</p>
+     @endif
 </body>
 </html>

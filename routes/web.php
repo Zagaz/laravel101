@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Main@index');
 
 // return views alpha.blade.php
 
 Route::get('/db', 'Main@db');
+
+Route::view('/user', 'userview', [
+    'name' => 'James',
+    'email' => 'james@email.com'
+]);
